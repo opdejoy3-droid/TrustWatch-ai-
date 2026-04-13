@@ -1,0 +1,6 @@
+# Ignore specific files
+.DS_Store
+*.zip
+*.log
+node_modules/
+.env

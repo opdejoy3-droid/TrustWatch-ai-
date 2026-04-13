@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustWatch AI — How It Works</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Three.js (Local) -->
+  <script src="libs/three.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HERO — 3D SHIELD                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Chrome Extension • v1.0
+      </div>
+      <h1 class="hero-title">
+        <span class="gradient-text">TrustWatch AI</span>
+      </h1>
+      <p class="hero-subtitle">
+        AI-powered cyber forensic shield that detects fraud, scams & dark patterns in real-time.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOW IT WORKS — 4 STEPS                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section how-section" id="howItWorks">
+    <div class="section-header reveal">
+      <div class="section-tag">⚙️ Process</div>
+      <h2 class="section-title">How It Works</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Four stages protect you from online fraud</p>
+    </div>
+
+    <div class="steps-list">
+      <div class="step-card reveal">
+        <div class="step-icon">🌐</div>
+        <div>
+          <div class="step-num">Step 01</div>
+          <div class="step-title">You Browse the Web</div>
+          <div class="step-desc">Navigate to any website. TrustWatch AI activates its content script, ready to scan on your command.</div>
+        </div>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-icon">🔬</div>
+        <div>
+          <div class="step-num">Step 02</div>
+          <div class="step-title">Deep DOM Forensics</div>
+          <div class="step-desc">TreeWalker engine scans the entire DOM — detecting invisible text, z-index hijacking, fake urgency patterns & suspicious forms.</div>
+        </div>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-icon">🧠</div>
+        <div>
+          <div class="step-num">Step 03</div>
+          <div class="step-title">AI-Powered Analysis</div>
+          <div class="step-desc">Priority keywords extracted → sent to GPT-OSS-120B → generates forensic report with risk level, trust score & top 3 hidden traps.</div>
+        </div>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-icon">🛡️</div>
+        <div>
+          <div class="step-num">Step 04</div>
+          <div class="step-title">Real-Time Protection</div>
+          <div class="step-desc">Fraud badges injected on suspicious elements. Trust Score gauge, DOM findings & full AI report displayed in the popup.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FEATURES — 6 MINI CARDS                                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="features">
+    <div class="section-header reveal">
+      <div class="section-tag">🎯 Features</div>
+      <h2 class="section-title">Six Layers of Protection</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon">👁️</span>
+        <div class="feature-title">Invisible Text</div>
+        <div class="feature-desc">Finds hidden terms matching background color</div>
+      </div>
+
+      <div class="feature-card reveal">
+        <span class="feature-icon">📐</span>
+        <div class="feature-title">Click Hijacking</div>
+        <div class="feature-desc">Detects z-index overlay traps</div>
+      </div>
+
+      <div class="feature-card reveal">
+        <span class="feature-icon">⏱️</span>
+        <div class="feature-title">Fake Urgency</div>
+        <div class="feature-desc">8+ patterns like "Only 2 left!"</div>
+      </div>
+
+      <div class="feature-card reveal">
+        <span class="feature-icon">🧠</span>
+        <div class="feature-title">AI Reports</div>
+        <div class="feature-desc">GPT-OSS-120B forensic analysis</div>
+      </div>
+
+      <div class="feature-card reveal">
+        <span class="feature-icon">🏷️</span>
+        <div class="feature-title">Fraud Badges</div>
+        <div class="feature-desc">On-page warnings with tooltips</div>
+      </div>
+
+      <div class="feature-card reveal">
+        <span class="feature-icon">🔒</span>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-desc">Zero cloud storage, all local</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- AI ENGINE — NEURAL NETWORK CANVAS                         -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section ai-section" id="aiEngine">
+    <div class="section-header reveal">
+      <div class="section-tag">🧬 AI Engine</div>
+      <h2 class="section-title">How Our AI Works</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="reveal">
+      <canvas id="neuralCanvas"></canvas>
+    </div>
+
+    <div class="ai-pipeline">
+      <div class="ai-pipe-step reveal">
+        <div class="ai-pipe-num">1</div>
+        <div class="ai-pipe-text">
+          <h4>Context Extraction</h4>
+          <p>Priority keywords (privacy, refund, billing) from DOM → 4000 chars</p>
+        </div>
+      </div>
+      <div class="ai-pipe-arrow">↓</div>
+      <div class="ai-pipe-step reveal">
+        <div class="ai-pipe-num">2</div>
+        <div class="ai-pipe-text">
+          <h4>Elite System Prompt</h4>
+          <p>AI operates as cyber-forensics expert analyzing fraud indicators</p>
+        </div>
+      </div>
+      <div class="ai-pipe-arrow">↓</div>
+      <div class="ai-pipe-step reveal">
+        <div class="ai-pipe-num">3</div>
+        <div class="ai-pipe-text">
+          <h4>Structured Analysis</h4>
+          <p>Risk Level → Trust Score (0-100) → Top 3 Traps → Verdict</p>
+        </div>
+      </div>
+      <div class="ai-pipe-arrow">↓</div>
+      <div class="ai-pipe-step reveal">
+        <div class="ai-pipe-num">4</div>
+        <div class="ai-pipe-text">
+          <h4>Score Rendering</h4>
+          <p>Animated gauge, findings list & report displayed in popup UI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- STATS                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="stats">
+    <div class="section-header reveal">
+      <div class="section-tag">📊 Numbers</div>
+      <h2 class="section-title">Built For Protection</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-value"><span class="counter" data-target="8">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Urgency Patterns</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-value"><span class="counter" data-target="3">0</span></div>
+        <div class="stat-label">DOM Forensic Layers</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-value"><span class="counter" data-target="4000">0</span></div>
+        <div class="stat-label">Char AI Context</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-value"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">Privacy Guaranteed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER — GO TO SCANNER                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer reveal">
+    <a href="auth.html?action=login" class="footer-install-btn" id="goToScanner">
+      <span>⚡</span>
+      <span>Start Scanning Now</span>
+    </a>
+    <p class="footer-text">
+      TrustWatch AI v1.0 • Open Source • MIT License<br>
+      Privacy-first: No data leaves your browser except AI requests.
+    </p>
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">Docs</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="homepage.js"></script>
+</body>
+</html>
